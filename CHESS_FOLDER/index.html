@@ -1,0 +1,153 @@
+<html>
+
+<head>
+    <title>Tushar's Chess Cube</title>
+    <link rel="icon" href="chesslogo8.png">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: #262E3A;
+            border: 2px solid white;
+            height: 833px;
+            width: 827px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            border: 2px solid white;
+            height: 100px;
+            width: 100px;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .w {
+            background-color: #677082;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box w " id="a11"><img src="RookB1.png" width="80" height="80"></div>
+        <div class="box " id="a12"><img src="HorseB1.png" width="80" height="80"></div>
+        <div class="box w " id="a13"><img src="BishopB1.png" width="80" height="80"></div>
+        <div class="box " id="a14"><img src="QueenB.png" width="80" height="80"></div>
+        <div class="box w " id="a15"><img src="KingB.png" width="80" height="80"></div>
+        <div class="box " id="a16"><img src="BishopB2.png" width="80" height="80"></div>
+        <div class="box w " id="a17"><img src="HorseB2.png" width="80" height="80"></div>
+        <div class="box " id="a18"><img src="RookB2.png" width="80" height="80"></div>
+
+        <div class="box " id="a21"><img src="PawnB1.png" width="80" height="80"></div>
+        <div class="box w " id="a22"><img src="PawnB2.png" width="80" height="80"></div>
+        <div class="box " id="a23"><img src="PawnB3.png" width="80" height="80"></div>
+        <div class="box w " id="a24"><img src="PawnB4.png" width="80" height="80"></div>
+        <div class="box " id="a25"><img src="PawnB5.png" width="80" height="80"></div>
+        <div class="box w " id="a26"><img src="PawnB6.png" width="80" height="80"></div>
+        <div class="box " id="a27"><img src="PawnB7.png" width="80" height="80"></div>
+        <div class="box w " id="a28"><img src="PawnB8.png" width="80" height="80"></div>
+
+        <div class="box w " id="a31"></div>
+        <div class="box " id="a32"></div>
+        <div class="box w " id="a33"></div>
+        <div class="box " id="a34"></div>
+        <div class="box w " id="a35"></div>
+        <div class="box " id="a36"></div>
+        <div class="box w " id="a37"></div>
+        <div class="box " id="a38"></div>
+
+        <div class="box " id="a41"></div>
+        <div class="box w " id="a42"></div>
+        <div class="box " id="a43"></div>
+        <div class="box w " id="a44"></div>
+        <div class="box " id="a45"></div>
+        <div class="box w " id="a46"></div>
+        <div class="box " id="a47"></div>
+        <div class="box w " id="a48"></div>
+
+        <div class="box w " id="a51"></div>
+        <div class="box " id="a52"></div>
+        <div class="box w " id="a53"></div>
+        <div class="box " id="a54"></div>
+        <div class="box w " id="a55"></div>
+        <div class="box " id="a56"></div>
+        <div class="box w " id="a57"></div>
+        <div class="box " id="a58"></div>
+
+        <div class="box " id="a61"></div>
+        <div class="box w " id="a62"></div>
+        <div class="box " id="a63"></div>
+        <div class="box w " id="a64"></div>
+        <div class="box " id="a65"></div>
+        <div class="box w " id="a66"></div>
+        <div class="box " id="a67"></div>
+        <div class="box w " id="a68"></div>
+
+        <div class="box w " id="a71"><img src="PawnW1.png" width="80" height="80"></div>
+        <div class="box " id="a72"><img src="PawnW2.png" width="80" height="80"></div>
+        <div class="box w " id="a73"><img src="PawnW3.png" width="80" height="80"></div>
+        <div class="box " id="a74"><img src="PawnW4.png" width="80" height="80"></div>
+        <div class="box w " id="a75"><img src="PawnW5.png" width="80" height="80"></div>
+        <div class="box " id="a76"><img src="PawnW6.png" width="80" height="80"></div>
+        <div class="box w " id="a77"><img src="PawnW7.png" width="80" height="80"></div>
+        <div class="box " id="a78"><img src="PawnW8.png" width="80" height="80"></div>
+
+        <div class="box " id="a81"><img src="RookW1.png" width="80" height="80"></div>
+        <div class="box w " id="a82"><img src="HorseW1.png" width="80" height="80"></div>
+        <div class="box " id="a83"><img src="BishopW1.png" width="80" height="80"></div>
+        <div class="box w " id="a84"><img src="QueenW.png" width="80" height="80"></div>
+        <div class="box " id="a85"><img src="KingW.png" width="80" height="80"></div>
+        <div class="box w " id="a86"><img src="BishopW2.png" width="80" height="80"></div>
+        <div class="box " id="a87"><img src="HorseW2.png" width="80" height="80"></div>
+        <div class="box w " id="a88"><img src="RookW2.png" width="80" height="80"></div>
+    </div>
+</body>
+
+<script>
+    let count = 0;
+    let Array = [];
+    let initialdiv;
+    let initialimg;
+    let initialimg2;
+    let targetdiv;
+    document.addEventListener('click', function (event) {
+        if (count % 2 == 0) {
+            initialdiv = event.target;//same
+            initialdivID = initialdiv.getAttribute('id');
+            
+            if (initialdivID == null) {
+                initialdiv = initialdiv.parentNode;
+            }
+            initialdivID = initialdiv.getAttribute('id');
+            console.log(initialdivID);
+            initialimg = initialdiv.querySelector('img');//same
+        }
+        else {
+            targetdiv = event.target;
+            targetdivID = targetdiv.getAttribute('id');
+            if (targetdivID == null) {
+                targetdiv = targetdiv.parentNode;
+            }
+            targetdivID = targetdiv.getAttribute('id');
+            console.log(targetdivID);
+            targetimg = targetdiv.querySelector('img');
+            if (targetimg != null) {
+                targetimg.remove();
+            }
+            targetdiv.appendChild(initialimg);
+        }
+        count++;
+    }, false)
+</script>
+
+</html>
